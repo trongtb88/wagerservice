@@ -41,3 +41,15 @@ curl --location --request POST 'http://localhost:8080/api/v1/wagers' \
     "selling_price": 34454.67
 }'
 ```
+
+
+## How to run this service at localhost
+1. Start your mysql at your localhost machine successfully
+2. Git clone this repo
+3. Change file .env which is mapped with your config (DB_USER, DB_PASSWORD, DB_HOST), please note commment DB_HOST at docker, uncomment using 127.0.0.1
+4. Create database wager_db by yourself
+5.  Go to terminal at root of project
+```sh
+   go get .    
+   go run src/cmd/main.go
+```
