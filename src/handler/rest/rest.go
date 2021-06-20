@@ -59,11 +59,11 @@ func (rst *rest) httpRespError(w http.ResponseWriter, statusCode int, err error,
 	var e ErrorMessage
 	if err != nil {
 		e = ErrorMessage{
-			Message: message,
+			Error: message + " " + err.Error(),
 		}
 	} else {
 		e = ErrorMessage{
-			Message: message,
+			Error: message,
 		}
 	}
 
